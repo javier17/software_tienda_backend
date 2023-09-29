@@ -1,11 +1,7 @@
 package co.com.tienda.model;
 
-import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -17,19 +13,16 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "categorias")
-public class Categoria implements Serializable{
-
-	private static final long serialVersionUID = 1L;
+@Table(name = "tipos_envase")
+public class TipoEnvase {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_categoria")
-	private int idCategoria;
+	@Column(name = "id_tipo_envase")
+	private String idTipoEnvase;
 	
 	@Column(name = "nombre")
 	private String nombre;
-	
+
 	@Column(name = "descripcion")
 	private String descripcion;
 	
